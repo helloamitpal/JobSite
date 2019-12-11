@@ -21,7 +21,7 @@ app.get('/*', (req, res) => {
         }
 
         return res.send(
-            data.replace('<div id="root"></div>', `<div id="root">${clientApp}</div>`);
+            data.replace('<div id="root"></div>', `<div id="root">${clientApp}</div>`)
         );
     });
 });
