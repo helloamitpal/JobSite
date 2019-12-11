@@ -1,3 +1,8 @@
+.grid-container {
+  flex: 1;
+  overflow: auto;
+}
+
 .grid-container .grid-item-container {
   padding: 1em;
   border-bottom: 1px solid #dfdfdf;

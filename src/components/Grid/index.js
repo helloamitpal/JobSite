@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import GridRow from './gridRow';
+import Pagination from '../pagination';
 
 import './grid.css';
 
