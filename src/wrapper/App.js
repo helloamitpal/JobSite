@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
-// import Router from '../router';
+import Router from '../router';
 import configureStore from '../stores/configureStores';
 import config from '../config';
-// import Header from '../components/header';
+import Header from '../components/header';
 
 import './app.css';
 
@@ -33,10 +33,10 @@ class App extends Component {
         const content = rehydrated ? (
             <div className="app-container">
                 <Provider store={store} key={config.STORAGE_KEY}>
-                    {/*<Header />*/}
-                    {/*<BrowserRouter>
+                    <Header />
+                    <BrowserRouter>
                         <Router />
-                    </BrowserRouter>*/}
+                    </BrowserRouter>
                 </Provider>
             </div>
         ) : null;
