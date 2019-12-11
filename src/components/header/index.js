@@ -5,7 +5,7 @@ import './header.css';
 // common header component
 const Header = () => (
     <div className="header-container">
-        <h1>JObSite</h1>
+        <h1>JobSite</h1>
     </div>
 );
 
