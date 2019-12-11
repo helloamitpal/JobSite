@@ -8,6 +8,7 @@ import ErrorBoundary from './wrapper/ErrorBoundary';
 import './index.css';
 
 // Added error boundary to encounter any unwanted error cases
-ReactDOM.render(<ErrorBoundary><App /></ErrorBoundary>, document.getElementById('root'));
+// hydrate function is used to make server side rendering
+ReactDOM.hydrate(<ErrorBoundary><App /></ErrorBoundary>, document.getElementById('root'));
 
 serviceWorker.unregister();
