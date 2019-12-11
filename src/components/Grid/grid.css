@@ -4,6 +4,10 @@
   cursor: pointer;
 }
 
+.grid-container .no-item-found {
+  margin: 1em;
+}
+
 .grid-container .grid-item-container:hover {
   background: #dfdfdf;
 }

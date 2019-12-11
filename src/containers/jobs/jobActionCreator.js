@@ -8,3 +8,10 @@ export const getJobList = () => (dispatch, getState, { api }) => {
         payload: {}
     });
 };
+
+export const searchJob = (searchText) => (dispatch) => {
+    dispatch({
+        type: actionTypes.SEARCH_JOB,
+        payload: { searchText }
+    });
+};

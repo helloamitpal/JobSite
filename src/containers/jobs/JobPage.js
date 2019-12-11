@@ -11,7 +11,7 @@ import Grid from '../../components/Grid';
 import './jobPage.css';
 
 const JobPage = ({ jobState, jobActions, history }) => {
-    const { loading, jobs, error } = jobState;
+    const { loading, jobs, error, filteredJobs } = jobState;
     const [searchText, setSearchText] = useState('');
 
     // calling the API once the component load
@@ -29,20 +29,24 @@ const JobPage = ({ jobState, jobActions, history }) => {
 
     const onChangeSearch = ({ target: { value } }) => {
         setSearchText(value);
+
+        if (value.trim()) {
+            jobActions.searchJob(value);
+        }
     };
 
     return (
         <div className="home-page-container">
             <ErrorHandler loading={loading} hasError={error} message={error} />
-            {(!loading && !error && jobs)
+            {(!loading && !error)
                 ? (
                     <div className="job-list-container">
                         <div className="search-text-container">
                             <label>Search Job</label>
-                            <input type="text" value={searchText} onChange={onChangeSearch} />
-                            {jobs.length && <i>{`${jobs.length} jobs found`}</i>}
+                            <input autoFocus type="text" value={searchText} onChange={onChangeSearch} />
+                            {(filteredJobs || jobs) ? <i>{`${searchText.trim().length ? filteredJobs.length : jobs.length} jobs found`}</i> : null}
                         </div>
-                        <Grid list={jobs} onClickRow={navigateToJobDetails} />
+                        <Grid list={searchText.trim().length ? filteredJobs : jobs} onClickRow={navigateToJobDetails} />
                     </div>
                 )
                 : null

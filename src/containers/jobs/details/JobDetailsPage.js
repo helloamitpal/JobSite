@@ -9,7 +9,7 @@ import './jobDetailsPage.css';
 const JobDetailsPage = ({ history }) => {
     const { state } = history.location;
     const selectedJob = state && state.selectedJob;
-    const { title, description, employment_type, id } = selectedJob || {};
+    const { title, description, employmentTypeLabel, id } = selectedJob || {};
 
     const goBackHome = () => {
         history.push(config.JOB_PAGE);
@@ -21,7 +21,7 @@ const JobDetailsPage = ({ history }) => {
                 ? (
                     <div className="details-section">
                         <h3>{`${title} (JOB ID: ${id})`}</h3>
-                        <i>{employment_type}</i>
+                        <i>{employmentTypeLabel}</i>
                         <p>{description}</p>
                         <Button onClick={goBackHome} label="Back" />
                     </div>

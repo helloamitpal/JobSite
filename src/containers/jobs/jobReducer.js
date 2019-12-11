@@ -1,11 +1,13 @@
 import { handle } from 'redux-pack';
 
 import * as actionTypes from './jobActionTypes';
+import { synthesizeJobData } from './jobHelper';
 
 // initial store state
 const initialState = {
-    jobs: null,
+    jobs: [],
     error: '',
+    filteredJobs: [],
     loading: false
 };
 
@@ -29,7 +31,8 @@ const jobReducer = (state = initialState, action = '') => {
                 }),
                 success: (prevState) => ({
                     ...prevState,
-                    jobs: [...payload]
+                    jobs: synthesizeJobData([...payload]),
+                    filteredJobs: []
                 }),
                 failure: (prevState) => (failureMessage(prevState, payload)),
                 finish: (prevState) => ({
@@ -37,6 +40,23 @@ const jobReducer = (state = initialState, action = '') => {
                     loading: false
                 })
             });
+        }
+
+        case actionTypes.SEARCH_JOB: {
+            let { searchText } = payload;
+            let filteredList = [];
+            const { jobs } = state;
+            if (jobs) {
+                searchText = searchText.trim().replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+                filteredList = jobs.filter(({ title }) => (new RegExp(searchText, 'i').test(title)));
+            }
+
+            return {
+                ...state,
+                loading: false,
+                error: '',
+                filteredJobs: filteredList
+            }
         }
 
         default:
