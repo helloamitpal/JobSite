@@ -30,3 +30,7 @@ This is an app for job list and related details
 - Added API interceptor to enabling the scope of writing central code while sending request or receiving response
 
 # Assumption or open questions
+
+- I do prefer writing test cases but as it was not clearly mentioned whether I need to write or not, I didn't consider the same
+- I didn't use "Styled Components" as suggested in the assignment because I found that quite heavy. So I preferred writing own components.
+- I didn't consider aesthetic beauty of this application as it was not mentioned in the assignment note. Though I made it clean and simple.
