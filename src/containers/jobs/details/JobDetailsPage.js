@@ -7,7 +7,8 @@ import config from '../../../config';
 import './jobDetailsPage.css';
 
 const JobDetailsPage = ({ history }) => {
-    const { state: { selectedJob } } = history.location;
+    const { state } = history.location;
+    const selectedJob = state && state.selectedJob;
     const { title, description, employment_type, id } = selectedJob || {};
 
     const goBackHome = () => {

@@ -1,0 +1,18 @@
+.grid-container .grid-item-container {
+  padding: 1em;
+  border-bottom: 1px solid #dfdfdf;
+  cursor: pointer;
+}
+
+.grid-container .grid-item-container:hover {
+  background: #dfdfdf;
+}
+
+.grid-container .grid-item-container span {
+  font-weight: bold;
+}
+
+.grid-container .grid-item-container p {
+  font-size: 0.8em;
+  margin-bottom: 0;
+}

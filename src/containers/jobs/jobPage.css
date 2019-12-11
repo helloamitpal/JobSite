@@ -1,0 +1,22 @@
+.home-page-container .search-text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.home-page-container .search-text-container label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.home-page-container .search-text-container input {
+  margin: 0;
+  padding: 5px 8px;
+  font-size: 1em;
+  border: 1px solid #dfdfdf;
+}
+
+.home-page-container .search-text-container input + i {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
