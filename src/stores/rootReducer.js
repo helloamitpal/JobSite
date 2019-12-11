@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-// import voteReducer from '../containers/home/voteReducer';
+import jobReducer from '../containers/jobs/jobReducer';
 
 // this is the root reducer to combine module wise reducers
 const rootReducer = combineReducers({
-  // vote: voteReducer
+  job: jobReducer
 });
 
 export default rootReducer;

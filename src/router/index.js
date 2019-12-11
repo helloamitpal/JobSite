@@ -10,12 +10,14 @@ import './router.css';
 // On demand module load will be taking place while a certain router URL will be accessed.
 // This is a common router for all modules.
 const Router = () => {
+    const JobModule = (React.lazy(() => (import('../containers/jobs/JobPage'))));
     const NotFoundModule = (React.lazy(() => (import('../containers/not-found/NotFoundPage'))));
 
     return (
         <div className="body-container">
             <Suspense fallback={<LoadingIndicator />}>
                 <Switch>
+                    <Route exact path={config.JOB_PAGE} render={(props) => <JobModule {...props} />} />
                     <Route path="" render={(props) => <NotFoundModule {...props} />} />
                 </Switch>
             </Suspense>

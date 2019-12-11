@@ -1,5 +1,5 @@
 const mapping = {
-    HOME_PAGE: '/'
+    JOb_PAGE: '/'
 };
 
 export default mapping;
