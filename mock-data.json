@@ -5,6 +5,66 @@
       "title": "Frontend Developer",
       "description": "Comfortable with modern JS stack, experience with React.",
       "employment_type": "full_time"
+    }, {
+      "id": 2,
+      "title": "Backend Developer",
+      "description": "Comfortable with modern JS stack, experience with Express.",
+      "employment_type": "full_time"
+    }, {
+      "id": 3,
+      "title": "Frontend Developer",
+      "description": "Comfortable with modern JS stack",
+      "employment_type": "part_time"
+    }, {
+      "id": 4,
+      "title": "Frontend Developer",
+      "description": "Experience with React.",
+      "employment_type": "full_time"
+    }, {
+      "id": 5,
+      "title": "Backend Developer",
+      "description": "Comfortable with modern JS stack",
+      "employment_type": "part_time"
+    }, {
+      "id": 6,
+      "title": "DB Developer",
+      "description": "Comfortable with Oracle",
+      "employment_type": "full_time"
+    }, {
+      "id": 7,
+      "title": "PowerBI Developer",
+      "description": "Comfortable with Microsoft PowerBI.",
+      "employment_type": "full_time"
+    }, {
+      "id": 8,
+      "title": "DevOps Developer",
+      "description": "Comfortable with DevOps tech-stack.",
+      "employment_type": "part_time"
+    }, {
+      "id": 9,
+      "title": "Data Scientist",
+      "description": "Comfortable with Python and Machine learning concepts.",
+      "employment_type": "full_time"
+    }, {
+      "id": 10,
+      "title": "Fullstack Developer",
+      "description": "Comfortable with modern JS stack, DotNet framework, experience with React.",
+      "employment_type": "part_time"
+    }, {
+      "id": 11,
+      "title": "Python Developer",
+      "description": "Comfortable with pyhton.",
+      "employment_type": "full_time"
+    }, {
+      "id": 12,
+      "title": "Ruby Developer",
+      "description": "Comfortable with Ruby, rails.",
+      "employment_type": "part_time"
+    }, {
+      "id": 13,
+      "title": "Recruitment and HR operations",
+      "description": "Comfortable with recruitment and HR operations",
+      "employment_type": "full_time"
     }
   ]
 }

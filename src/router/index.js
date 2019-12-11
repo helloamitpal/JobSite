@@ -11,6 +11,7 @@ import './router.css';
 // This is a common router for all modules.
 const Router = () => {
     const JobModule = (React.lazy(() => (import('../containers/jobs/JobPage'))));
+    const JobDetailsModule = (React.lazy(() => (import('../containers/jobs/details/JobDetailsPage'))));
     const NotFoundModule = (React.lazy(() => (import('../containers/not-found/NotFoundPage'))));
 
     return (
@@ -18,6 +19,7 @@ const Router = () => {
             <Suspense fallback={<LoadingIndicator />}>
                 <Switch>
                     <Route exact path={config.JOB_PAGE} render={(props) => <JobModule {...props} />} />
+                    <Route exact path={config.JOB_DETAILS_PAGE} render={(props) => <JobDetailsModule {...props} />} />
                     <Route path="" render={(props) => <NotFoundModule {...props} />} />
                 </Switch>
             </Suspense>
