@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import GridRow from './gridRow';
-import Pagination from '../pagination';
 
 import './grid.css';
 
@@ -22,13 +21,14 @@ const Grid = memo(({ list, onClickRow, className }) => {
 });
 
 Grid.propTypes = {
-    list: PropTypes.array.isRequired,
+    list: PropTypes.array,
     onClickRow: PropTypes.func.isRequired,
     className: PropTypes.string
 };
 
 Grid.defaultProps = {
-    className: ''
+    className: '',
+    list: []
 };
 
 export default Grid;

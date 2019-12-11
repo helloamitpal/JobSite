@@ -5,8 +5,11 @@
 
 .grid-container .grid-item-container {
   padding: 1em;
-  border-bottom: 1px solid #dfdfdf;
   cursor: pointer;
+}
+
+.grid-container .grid-item-container:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .grid-container .no-item-found {

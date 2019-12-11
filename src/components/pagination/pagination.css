@@ -1,0 +1,19 @@
+.pagination-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 0;
+  border-top: 1px solid #dfdfdf;
+}
+
+.pagination-container li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.pagination-container li[disabled] {
+  pointer-events: none;
+  color: #afafaf;
+}

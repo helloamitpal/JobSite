@@ -6,7 +6,8 @@ import { bindActionCreators } from 'redux';
 import * as jobActionCreators from './jobActionCreator';
 import config from '../../config';
 import ErrorHandler from '../../components/error-handler';
-import Grid from '../../components/Grid';
+import Grid from '../../components/grid';
+import Pagination from '../../components/pagination';
 
 import './jobPage.css';
 
@@ -38,7 +39,7 @@ const JobPage = ({ jobState, jobActions, history }) => {
     return (
         <div className="home-page-container">
             <ErrorHandler loading={loading} hasError={error} message={error} />
-            {(!loading && !error)
+            {(!loading && !error && jobs)
                 ? (
                     <div className="job-list-container">
                         <div className="search-text-container">
@@ -46,7 +47,11 @@ const JobPage = ({ jobState, jobActions, history }) => {
                             <input autoFocus type="text" value={searchText} onChange={onChangeSearch} />
                             {(filteredJobs || jobs) ? <i>{`${searchText.trim().length ? filteredJobs.length : jobs.length} jobs found`}</i> : null}
                         </div>
-                        <Grid list={searchText.trim().length ? filteredJobs : jobs} onClickRow={navigateToJobDetails} />
+                        <Pagination list={searchText.trim().length ? filteredJobs : jobs} pageSize={config.PAGE_SIZE}>
+                            {
+                                (paginatedList) => (<Grid list={paginatedList} onClickRow={navigateToJobDetails} />)
+                            }
+                        </Pagination>
                     </div>
                 )
                 : null
