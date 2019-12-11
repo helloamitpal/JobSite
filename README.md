@@ -5,8 +5,10 @@ This is an app for job list and related details
 # Installation instruction
 
 1. `npm install`
-2. `npm run start`
-3. The application will automatically be opened in the browser
+2. `sudo npm install -g json-server` to run the mock server
+3. Open a new console, go to the jobsite folder and execute this command `json-server --watch mock-data.json --port 7096`. Now, the API will be available in this URL: http://localhost:7096/alljobs. [** NOTE: You may change the port number (7096) if it is conflicting with any running port. Then you have to change the defined URL as well in /jobsite/src/config/default.js file. Variable name API_BASE_URL]
+4. In another console, execute this command as well to kick-start the application `npm run start`. Default port is 3000. If that port is not available, it would ask for changing the port number automatically.
+5. The application will be opened in the browser.
 
 # Features and coding styles
 

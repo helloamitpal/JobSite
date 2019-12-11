@@ -4,7 +4,7 @@ import * as actionTypes from './jobActionTypes';
 export const getJobList = () => (dispatch, getState, { api }) => {
     dispatch({
         type: actionTypes.GET_ALL_JOBS,
-        promise: api.get('/jobs'),
+        promise: api.get('/alljobs'),
         payload: {}
     });
 };
